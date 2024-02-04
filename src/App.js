@@ -1,11 +1,18 @@
 import './App.css';
-import Head from './components/Head';
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import MainPage from './components/MainPage';
 import Body from './components/Body';
 import About from './components/About';
+import Gallery from './components/Gallery';
+import ContactUs from './components/ContactUs';
+import Layout from './components/Layout';
 
-const appRouter = createBrowserRouter([
+
+
+const appRouter = createBrowserRouter([{
+  path:"/",
+  element:<Layout />,
+  children:[
   {
     path:'/',
     render:<Body />,
@@ -17,17 +24,23 @@ const appRouter = createBrowserRouter([
       {
         path:'about',
         element:<About />
+      },
+      {
+        path:'gallery',
+        element:<Gallery />
+      },
+      {
+        path:'contact',
+        element:<ContactUs />
       }
     ]
-  }
+  }]}
 ])
-
 
 
 function App() {
   return (
     <div className="App">
-      <Head />
       <RouterProvider router={appRouter}/>
     </div>
   );
