@@ -1,14 +1,18 @@
 import React from 'react';
 import mainbg from '../assets/img/mainbackground.jpg';
 import ReviewDisplay from './ReviewDisplay';
+import IntroductionSection from './IntroductionSection';
 
 const MainPage = () => {
   return (
-    <div
+    <div>
+      <IntroductionSection />
+      <div
       className='bg-cover bg-center h-screen'
       style={{ backgroundImage: `url(${mainbg})` }}
-    >
-      <ReviewDisplay />
+      >
+        <ReviewDisplay />
+      </div>
     </div>
   );
 };
