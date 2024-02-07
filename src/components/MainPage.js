@@ -2,7 +2,8 @@ import React from 'react';
 import mainbg from '../assets/img/mainbackground.jpg';
 import ReviewDisplay from './ReviewDisplay';
 import IntroductionSection from './IntroductionSection';
-
+import PlanCard from './PlanCard';
+import Footer from './Footer';
 const MainPage = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const MainPage = () => {
       style={{ backgroundImage: `url(${mainbg})` }}
       >
         <ReviewDisplay />
+        
       </div>
     </div>
   );
