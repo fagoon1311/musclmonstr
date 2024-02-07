@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ReviewCard = ({ info }) => {
-    console.log(info)
+    //console.log(info)
     const { title, description, image} = info
   return (
     <div class="flex-shrink-0 relative flex bg-clip-border rounded-xl bg-[#162135] text-gray-700 shadow-md w-[24rem] max-w-full flex-row">

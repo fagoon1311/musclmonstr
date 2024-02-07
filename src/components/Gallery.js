@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+// import ModalForm from './ModalForm';
 
 const Gallery = () => {
-  return (
-    <div>Gallery</div>
-  )
-}
+  // const [toggle, setToggle] = useState(false);
 
-export default Gallery
+  return (
+    <div></div>
+  )
+};
+
+export default Gallery;

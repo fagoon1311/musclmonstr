@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { introduction } from '../utils/Constants'
+import ModalForm from './ModalForm'
 
 const IntroductionSection = () => {
+  const [toggleForm, setToggleForm] = useState(true)
   return (
     <div className='bg-[#162135] grid grid-flow-col'>
         <div className='col-span-6 p-2'>
@@ -15,8 +17,14 @@ const IntroductionSection = () => {
            <br></br>
            <br></br>
            <span className='flex justify-center px-2'>
-           <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate mx-2 hover:bg-[#BF6900]'>Book an Appointment</button>
-           <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate hover:bg-[#BF6900]'>Locate Us</button>
+
+           <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate mx-2 hover:bg-[#BF6900]'
+           onClick={()=>setToggleForm(!toggleForm)}
+           >Book an Appointment</button>
+
+           <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate hover:bg-[#BF6900]'
+           //onclick
+           >Locate Us</button>
            </span>
         </div>
         <div className='flex justify-end col-span-6'>
@@ -25,6 +33,18 @@ const IntroductionSection = () => {
           alt='bodybuilder'
           className='h-[700px] w-[600px] justify-end rounded-r-lg'
           ></img>
+        <div className="relative">
+          {/* <button onClick={() => setToggleForm(!toggleForm)}>Open</button> */}
+          {toggleForm && (
+              <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-[#162135] rounded-lg p-8 w-[25rem]">
+                  <ModalForm toggle={toggleForm} setToggle={setToggleForm}/>
+                  {/* <button className="absolute top-0 right-0 p-2 border" onClick={() => setToggleForm(false)}>Close</button> */}
+              </div>
+              </div>
+            )}
+        </div>
+     
         </div>
       </div>
   )
