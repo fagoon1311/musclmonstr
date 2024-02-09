@@ -3,7 +3,7 @@ import { introduction } from '../utils/Constants'
 import ModalForm from './ModalForm'
 
 const IntroductionSection = () => {
-  const [toggleForm, setToggleForm] = useState(true)
+  const [toggleForm, setToggleForm] = useState(false)
   return (
     <div className='bg-[#162135] grid grid-flow-col'>
         <div className='col-span-6 p-2'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import PlanCard from './PlanCard';
+// import PlanCard from './PlanCard';
 // import ModalForm from './ModalForm';
 
 const Gallery = () => {
@@ -8,6 +8,7 @@ const Gallery = () => {
 
   return (
     <div>
+     
     
     </div>
   )
