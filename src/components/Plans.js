@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PlanCard from './PlanCard'
+import CheckoutForm from './CheckoutForm'
 
 const planDetails = [
   {
@@ -24,15 +25,22 @@ const planDetails = [
   }
 ]
 const Plans = () => {
+  const [checkoutformToggle, setCheckoutFormToggle] = useState(false)
   return (
-    // <div>
-    //   <PlanCard  info={planDetails[0]}/>
-    // </div>
+    <div>
     <div className='flex justify-between py-2 px-10'>
     {
-      planDetails.map((plan, index)=>(<PlanCard key={index} info={plan}/>))
+      planDetails.map((plan, index)=>(<PlanCard key={index} info={plan} checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>))
     }
     </div>
+    <div>
+      {
+      checkoutformToggle&&  
+      <CheckoutForm checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>
+      }
+    </div>
+    </div>
+
   )
 }
 
