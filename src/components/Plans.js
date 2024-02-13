@@ -37,10 +37,10 @@ const Plans = () => {
       {
       checkoutformToggle&& (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-                {/* <div className="bg-[#162135] rounded-lg p-8 w-[30rem]"> */}
-                    <CheckoutForm checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>
+  
+          <CheckoutForm checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>
                 
-                </div>
+        </div>
       )}
     </div>
     </div>

@@ -16,7 +16,12 @@ const MainPage = () => {
       style={{ backgroundImage: `url(${mainbg})` }}
       >
         <ReviewDisplay />
-        <Plans /> 
+        <Plans />
+        <div className='flex flex-col w-full justify-center items-center h-60'>
+          <h1 className='text-white font text-sm '>Call us Today</h1>
+          <h1 className='text-white font-bold text-7xl py-10'>+91-1234567890</h1>
+          <p className='text-white text-sm '>Do something today that your future self will thank you for</p>
+        </div> 
       </div>  
     </div>
     <div>
