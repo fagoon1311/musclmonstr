@@ -33,11 +33,15 @@ const Plans = () => {
       planDetails.map((plan, index)=>(<PlanCard key={index} info={plan} checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>))
     }
     </div>
-    <div>
+    <div className='relative'>
       {
-      checkoutformToggle&&  
-      <CheckoutForm checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>
-      }
+      checkoutformToggle&& (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+                {/* <div className="bg-[#162135] rounded-lg p-8 w-[30rem]"> */}
+                    <CheckoutForm checkform = {checkoutformToggle} setCheckForm ={setCheckoutFormToggle}/>
+                
+                </div>
+      )}
     </div>
     </div>
 

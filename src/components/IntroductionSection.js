@@ -34,7 +34,6 @@ const IntroductionSection = () => {
           className='h-[700px] w-[600px] justify-end rounded-r-lg'
           ></img>
         <div className="relative">
-          {/* <button onClick={() => setToggleForm(!toggleForm)}>Open</button> */}
           {toggleForm && (
               <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
                 <div className="bg-[#162135] rounded-lg p-8 w-[25rem]">
