@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { introduction } from '../utils/Constants'
 import ModalForm from './ModalForm'
+import LocationPopUp from './LocationPopUp'
 
 const IntroductionSection = () => {
   const [toggleForm, setToggleForm] = useState(false)
+  const [toggleLocation, setToggleLocation] = useState(false)
   return (
     <div className='bg-[#162135] grid grid-flow-col'>
         <div className='col-span-6 p-2'>
@@ -23,7 +25,7 @@ const IntroductionSection = () => {
            >Book an Appointment</button>
 
            <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate hover:bg-[#BF6900]'
-           //onclick
+           onClick={()=>setToggleLocation(!toggleLocation)}
            >Locate Us</button>
            </span>
         </div>
@@ -38,6 +40,17 @@ const IntroductionSection = () => {
               <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
                 <div className="bg-[#162135] rounded-lg p-8 w-[25rem]">
                   <ModalForm toggle={toggleForm} setToggle={setToggleForm}/>
+                  {/* <button className="absolute top-0 right-0 p-2 border" onClick={() => setToggleForm(false)}>Close</button> */}
+              </div>
+              </div>
+            )}
+        </div>
+    
+        <div className="relative">
+          {toggleLocation && (
+              <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-[#162135] rounded-lg p-8 w-[25rem]">
+                  <LocationPopUp toggle={toggleLocation} setToggle={setToggleLocation}/>
                   {/* <button className="absolute top-0 right-0 p-2 border" onClick={() => setToggleForm(false)}>Close</button> */}
               </div>
               </div>
