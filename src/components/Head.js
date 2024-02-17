@@ -35,7 +35,7 @@ const Head = () => {
           
             <ul className='flex py-8'>
                 <li className='px-2 text-white'><Link to="/gallery"> Gallery</Link></li>
-                <li className='px-2 text-white'><Link to="/about"> About Us</Link></li>
+                <li className='px-2 text-white'><Link to="/login"> Login</Link></li>
                 <li className='px-2 text-white'><Link to="/contact"> Contact Us</Link></li>
                 {/* <li className='px-2'><Link to="/gallery"></Link></li> */}
             </ul>

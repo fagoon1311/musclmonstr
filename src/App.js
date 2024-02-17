@@ -2,7 +2,7 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import MainPage from './components/MainPage';
 import Body from './components/Body';
-import About from './components/About';
+import Login from './components/Login';
 import Gallery from './components/Gallery';
 import ContactUs from './components/ContactUs';
 import Layout from './components/Layout';
@@ -22,8 +22,8 @@ const appRouter = createBrowserRouter([{
         element:<MainPage />
       },
       {
-        path:'about',
-        element:<About />
+        path:'login',
+        element:<Login />
       },
       {
         path:'gallery',

@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckoutForm from './CheckoutForm';
+// import CheckoutForm from './CheckoutForm';
 // import PlanCard from './PlanCard';
 // import ModalForm from './ModalForm';
 
@@ -9,8 +9,8 @@ const Gallery = () => {
 
   return (
     <div>
-     <CheckoutForm />
-    
+     
+  
     </div>
   )
 };
