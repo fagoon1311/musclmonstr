@@ -4,6 +4,8 @@ import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router-dom'
 import Banner from './Banner'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 
 const Title = () =>{
@@ -18,6 +20,10 @@ const Title = () =>{
 }
 
 const Head = () => {
+  const { loginWithRedirect } = useAuth0();
+  const { logout, isAuthenticated, user} = useAuth0();
+
+  
   return (
     <div >
     <div className='grid grid-flow-col bg-[#BF6900]'>
@@ -35,7 +41,16 @@ const Head = () => {
           
             <ul className='flex py-8'>
                 <li className='px-2 text-white'><Link to="/gallery"> Gallery</Link></li>
-                <li className='px-2 text-white'><Link to="/login"> Login</Link></li>
+                {/* <li className='px-2 text-white'><Link to="/login"> Login</Link></li> */}
+
+                <li className='px-2 text-[#BF6900]'> {isAuthenticated && <p> Welcome: {user.name}</p>}</li>
+
+                { isAuthenticated ? 
+                <li className='px-2 text-white'><button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button></li>
+                  :
+                <li className='px-2 text-white'><button onClick={() => loginWithRedirect()}>Log In</button></li>
+                }
+
                 <li className='px-2 text-white'><Link to="/contact"> Contact Us</Link></li>
                 {/* <li className='px-2'><Link to="/gallery"></Link></li> */}
             </ul>

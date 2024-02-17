@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
+    "@auth0/auth0-react": "^2.2.4",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@react-google-maps/api": "^2.19.3",
     "@testing-library/jest-dom": "^5.17.0",
