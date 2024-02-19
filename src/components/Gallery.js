@@ -1,4 +1,5 @@
 import React from 'react';
+import Jobs from './Jobs';
 
 // import CheckoutForm from './CheckoutForm';
 // import PlanCard from './PlanCard';
@@ -10,8 +11,7 @@ const Gallery = () => {
 
   return (
     <div>
-   This is gallery
-  
+    <Jobs />
     </div>
   )
 };
