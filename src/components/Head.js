@@ -43,6 +43,8 @@ const Head = () => {
                 <li className='px-2 text-white'><Link to="/gallery"> Gallery</Link></li>
                 {/* <li className='px-2 text-white'><Link to="/login"> Login</Link></li> */}
                 <li className='px-2 text-white'><Link to="/contact"> Contact Us</Link></li>
+                <li className='px-2 text-white'><Link to="/career"> Careers</Link></li>
+
 
 
                 <li className='px-2 text-[#BF6900]'> {isAuthenticated && <p> Welcome: {user.name}</p>}</li>

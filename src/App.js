@@ -7,6 +7,7 @@ import Gallery from './components/Gallery';
 import ContactUs from './components/ContactUs';
 import Layout from './components/Layout';
 import { Auth0Provider } from '@auth0/auth0-react'
+import Careers from './components/Careers';
 
 
 
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([{
       {
         path:'contact',
         element:<ContactUs />
+      },
+      {
+      path:'career',
+      element:<Careers />
       }
     ]
   }]}
