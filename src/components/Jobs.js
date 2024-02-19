@@ -3,17 +3,22 @@ import React from 'react'
 
 const JobSection = ({title, description, isVisible, setIsVisible}) =>{
     return(
-        <div>
-            <h3>{title}</h3>
+        <div className="bg-[#162135] p-2 flex">
+            <span className="px-5"><h3 className="text-[#BF6900] font-semibold text-2xl">{title}</h3></span>
+            <span>
+            {isVisible && <p className="text-white text-sm">{description}</p>}
             {
                 isVisible ? 
-                <button onClick={()=>setIsVisible(false)}>Hide</button> :
-                <button onClick={()=>setIsVisible(true)}>Show</button>
+                <button 
+                className=" border border-[#BF6900] text-white px-3"
+                onClick={()=>setIsVisible(false)}>Hide</button> :
+                <button 
+                className="border border-[#BF6900] text-white  px-3"
+                onClick={()=>setIsVisible(true)}>Show</button>
             }
-            {isVisible && <p>{description}</p>}
+            </span>
         </div>
     )
-
 }
 
 
