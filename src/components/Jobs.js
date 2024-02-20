@@ -21,7 +21,7 @@ const JobSection = ({title, description, isVisible, setIsVisible, skillset}) =>{
             </span>
             {isVisible&& <button 
             onClick={()=>{alert("Succesfully Applied")}}
-            className="px-2 mx-2 text-white border border-white bg-[#bf6900] w-[6rem] rounded-xl">Apply Now</button>}
+            className="px-2 mx-8 text-white border border-white bg-[#bf6900] w-[6rem] rounded-xl">Apply Now</button>}
 
         </div>
     )
