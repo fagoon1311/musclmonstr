@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Banner from './Banner'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { useAuth0 } from "@auth0/auth0-react";
-
+import { motion } from 'framer-motion'
 
 
 const Title = () =>{
@@ -40,20 +40,21 @@ const Head = () => {
           </Player>
           
             <ul className='flex py-8'>
-                <li className='px-2 text-white'><Link to="/gallery"> Gallery</Link></li>
+                <motion.li whileHover={{scale:1.05}} className='px-2 text-white'><Link to="/"> Home</Link></motion.li>
+
+                <motion.li whileHover={{scale:1.05}}  className='px-2 text-white'><Link to="/gallery"> Gallery</Link></motion.li>
                 {/* <li className='px-2 text-white'><Link to="/login"> Login</Link></li> */}
-                <li className='px-2 text-white'><Link to="/contact"> Contact Us</Link></li>
-                <li className='px-2 text-white'><Link to="/career"> Careers</Link></li>
+                <motion.li whileHover={{scale:1.05}} className='px-2 text-white'><Link to="/career"> Careers</Link></motion.li>
 
 
 
-                <li className='px-2 text-[#BF6900]'> {isAuthenticated && <p> Welcome: {user.name}</p>}</li>
+                <motion.li whileHover={{scale:1.05}} className='px-2 text-[#BF6900]'> {isAuthenticated && <p> Welcome: {user.name}</p>}</motion.li>
 
                 { isAuthenticated ? 
-                <li className='px-2 text-white'><button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button></li>
+                <motion.li whileHover={{scale:1.05}} className='px-2 text-white'><button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button></motion.li>
                   :
-                <li className='px-2 text-white'><button className="text-white bg-[#BF6900] hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                onClick={() => loginWithRedirect()}>Log In</button></li>
+                <motion.li whileHover={{scale:1.05}} className='px-2 text-white'><button className="text-white bg-[#BF6900] hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => loginWithRedirect()}>Log In</button></motion.li>
                 }
 
                 {/* <li className='px-2'><Link to="/gallery"></Link></li> */}

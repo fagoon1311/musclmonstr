@@ -1,10 +1,13 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 const ReviewCard = ({ info }) => {
     //console.log(info)
     const { title, description, image} = info
   return (
-    <div class="flex-shrink-0 relative flex bg-clip-border rounded-xl bg-[#162135] text-gray-700 shadow-md w-[24rem] max-w-full flex-row">
+    <motion.div 
+    whileHover={{scale:1.05}}
+    class="flex-shrink-0 relative flex bg-clip-border rounded-xl bg-[#162135] text-gray-700 shadow-md w-[24rem] max-w-full flex-row">
     <div
       class="relative w-1/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
       <img
@@ -20,7 +23,7 @@ const ReviewCard = ({ info }) => {
       </p>
   
     </div>
-  </div>  
+  </motion.div>  
   )
 }
 

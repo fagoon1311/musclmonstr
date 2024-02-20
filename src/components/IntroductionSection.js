@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { introduction } from '../utils/Constants'
 import ModalForm from './ModalForm'
 import LocationPopUp from './LocationPopUp'
+import {motion} from 'framer-motion'
 
 const IntroductionSection = () => {
   const [toggleForm, setToggleForm] = useState(false)
@@ -20,13 +21,16 @@ const IntroductionSection = () => {
            <br></br>
            <span className='flex justify-center px-2'>
 
-           <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate mx-2 hover:bg-[#BF6900]'
+           <motion.button 
+           whileHover={{scale:1.05}}
+           className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate mx-2 hover:bg-[#BF6900]'
            onClick={()=>setToggleForm(!toggleForm)}
-           >Book an Appointment</button>
+           >Book an Appointment</motion.button>
 
-           <button className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate hover:bg-[#BF6900]'
+           <motion.button 
+           whileHover={{scale:1.05}}on className='border-4 border-[#BF6900] px-5 py-2 w-[14rem] text-white border-separate hover:bg-[#BF6900]'
            onClick={()=>setToggleLocation(!toggleLocation)}
-           >Locate Us</button>
+           >Locate Us</motion.button>
            </span>
         </div>
         <div className='flex justify-end col-span-6'>
