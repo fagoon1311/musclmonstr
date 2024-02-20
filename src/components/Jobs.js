@@ -19,6 +19,10 @@ const JobSection = ({title, description, isVisible, setIsVisible, skillset}) =>{
                 onClick={()=>setIsVisible(true)}><ChevronDownCircle /></button>
             }
             </span>
+            {isVisible&& <button 
+            onClick={()=>{alert("Succesfully Applied")}}
+            className="px-2 mx-2 text-white border border-white bg-[#bf6900] w-[6rem] rounded-xl">Apply Now</button>}
+
         </div>
     )
 }

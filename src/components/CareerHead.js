@@ -18,7 +18,10 @@ const CareerHead = () => {
                     <div
                         className="relative px-7 py-6 bg-[#BF6900] ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6">
                     <div className="space-y-2">
-                        <p className="text-black">View All Openings</p>
+                        <p className="text-black" onClick={()=>{
+                            window.scrollTo({top:document.body.scrollHeight,
+                            behavior:'smooth'
+                        })}}>View All Openings</p>
                     </div>
                 </div>
                 </div>
