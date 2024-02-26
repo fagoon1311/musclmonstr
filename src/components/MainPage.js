@@ -6,9 +6,13 @@ import IntroductionSection from './IntroductionSection';
 import Footer from './Footer';
 import Plans from './Plans';
 
+import {motion} from 'framer-motion'
 const MainPage = () => {
   return (
-    <>
+    <motion.div
+    initial={{x:'100vw'}}
+    animate={{x:'0vw'}}
+    transition={{type: 'spring', bounce:0}}>
     <div>
       <IntroductionSection />
       <div
@@ -27,7 +31,7 @@ const MainPage = () => {
     <div>
     <Footer />
     </div>
-    </>
+    </motion.div>
   );
 };
 

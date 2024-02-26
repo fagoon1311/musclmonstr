@@ -1,6 +1,7 @@
 import { useState } from "react"
 import React from 'react'
 import { ChevronDownCircle, ChevronUpCircle } from "lucide-react"
+import { motion } from 'framer-motion'
 const JobSection = ({title, description, isVisible, setIsVisible, skillset}) =>{
     return(
         <div className="bg-[#162135] p-2 flex flex-col">

@@ -12,7 +12,11 @@ const Gallery = () => {
  
 
   return (
-    <div className='p-4 bg-black'>
+    <motion.div 
+    initial={{x:'100vw'}}
+    animate={{x:'0vw'}}
+    transition={{type:'spring', delay:0, bounce:0}}
+    className='p-4 bg-black'>
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
       <div className="grid gap-4">
         <div>
@@ -211,7 +215,7 @@ const Gallery = () => {
     </div>
 
 
-    </div>
+    </motion.div>
   )
 };
 
